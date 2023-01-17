@@ -19,8 +19,9 @@ Dowloaded the aforementioned table in Microsoft Excel (.csv) format and imported
 ![image](https://user-images.githubusercontent.com/117634180/213017815-633e71b3-8a8e-4aae-a3cb-e894efded018.png)
 
 # STEP 4. Creating the dashboards
-The last step involved creating Tableau dashbaord. Features used:
+The last step involved creating Tableau dashbaord. Tableau functionality and features used:
+  - Dynamic Parameters
   - Parameter Actions
-  - Dynamic Parameter Fields
-  - Navigation Buttons for easier 
-  - User specified parameter
+  - Level of Detail Expressions
+  - Navigation Buttons
+  - Custom Shapes and Custom Number Formatting
