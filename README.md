@@ -10,6 +10,17 @@ Below I outlined the steps involved in creation of this dashboard
 # STEP 1. Installing the Database
 First I have installed the SQL Server Management Studio (SSMS) onto my local machine and ran the Northwind database installation sripts locally. The scripts are available here: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
 
-# STEP 2. Writing Scripts
-I used the database schema to join the tables together and developed my future data model
+# STEP 2. Writing the Scripts
+I used the database schema to join the tables together and developed my future data model. This meant I needed to create three separate tables: Orders, Employees and Products.The scripts for updating and creating the tables are available here: link
 ![database_schema](https://user-images.githubusercontent.com/117634180/213016206-473ed04d-696d-4d90-8e18-2be10c2b324c.png)
+
+# STEP 3. Dowloading the tables/data model
+Dowloaded the aforementioned table in Microsoft Excel (.csv) format and imported them into the Tableau Data Model:
+![image](https://user-images.githubusercontent.com/117634180/213017815-633e71b3-8a8e-4aae-a3cb-e894efded018.png)
+
+# STEP 4. Creating the dashboards
+The last step involved creating Tableau dashbaord. Features used:
+  - Parameter Actions
+  - Dynamic Parameter Fields
+  - Navigation Buttons for easier 
+  - User specified parameter
