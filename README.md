@@ -33,3 +33,76 @@ The last step involved creating Tableau dashbaord. Tableau functionality and fea
   - Level of Detail Expressions
   - Navigation Buttons
   - Custom Shapes and Custom Number Formatting
+# SQL Code Snippets
+Joining tables together and selecting columns across different datasets
+```
+SELECT 
+	t.TerritoryID,
+	EmployeeID,
+	TerritoryDescription,
+	RegionDescription
+FROM Territories AS t
+	INNER JOIN Region AS r ON t.RegionID=r.RegionID
+	INNER JOIN EmployeeTerritories AS e ON t.TerritoryID=e.TerritoryID
+```
+Writing CASE statements
+```
+CASE Metric WHEN 'Revenue' THEN 1
+WHEN 'CostOfGoods' THEN 2
+WHEN 'DiscountValue' THEN 3
+WHEN 'FreightByProduct' THEN 4
+ELSE 999 END AS SortingIndex
+```
+Changing data structure by unpivoting
+```
+SELECT * 
+	FROM(SELECT OrderID,
+		OrderDate,
+		-SUM(DiscountValue) AS DiscountValue,
+		SUM(Revenue) AS Revenue,
+		-SUM(CostOfGoods) AS CostOfGoods,
+		-SUM(FreightByProduct) AS FreightByProduct
+	FROM OrdersMain 
+	GROUP BY OrderID,OrderDate) a
+	UNPIVOT(Value for Metric IN (a.DiscountValue, Revenue, CostOfGoods, FreightByProduct)) AS b
+```
+Creating, altering and updating tables
+```
+CREATE TABLE waterfall_dataset (
+	OrderID int,
+	OrderDate datetime,
+	Metric nvarchar(40),
+	Value money,
+	SortingIndex smallint)
+...
+ALTER TABLE [dbo].[Order Details]
+ADD UnitCost real;
+...
+UPDATE [dbo].[Order Details]
+SET 
+	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
+```
+Writing CTEs
+```
+WITH number_of_products_cte (OrderID,NumberOfProducts) 
+AS
+(
+SELECT [Orders].OrderID,
+	COUNT([Orders].OrderID) AS NumberOfProducts
+FROM Orders
+INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
+GROUP BY [Orders].OrderID
+)
+```
+Aggregating, formating and applying various functions to transform data
+```
+SELECT [Orders].OrderID,
+	COUNT([Orders].OrderID) AS NumberOfProducts
+FROM Orders
+INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
+GROUP BY [Orders].OrderID
+...
+	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
+...
+DATEADD(year,24,OrderDate) AS OrderDate,
+```
