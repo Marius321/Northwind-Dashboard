@@ -53,7 +53,7 @@ FROM Orders
 INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
 GROUP BY [Orders].OrderID
 ...
-	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
+[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
 ...
 DATEADD(year,24,OrderDate) AS OrderDate,
 ```
@@ -88,7 +88,7 @@ SELECT *
 		-SUM(FreightByProduct) AS FreightByProduct
 	FROM OrdersMain 
 	GROUP BY OrderID,OrderDate) a
-	UNPIVOT(Value for Metric IN (a.DiscountValue, Revenue, CostOfGoods, FreightByProduct)) AS b
+UNPIVOT(Value for Metric IN (a.DiscountValue, Revenue, CostOfGoods, FreightByProduct)) AS b
 ```
 Creating, altering and updating tables
 ```
@@ -103,6 +103,6 @@ ALTER TABLE [dbo].[Order Details]
 ADD UnitCost real;
 ...
 UPDATE [dbo].[Order Details]
-SET 
-	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
+SET
+[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
 ```
