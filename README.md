@@ -45,6 +45,18 @@ FROM Territories AS t
 	INNER JOIN Region AS r ON t.RegionID=r.RegionID
 	INNER JOIN EmployeeTerritories AS e ON t.TerritoryID=e.TerritoryID
 ```
+Aggregating, formating and applying various functions to transform data
+```
+SELECT [Orders].OrderID,
+	COUNT([Orders].OrderID) AS NumberOfProducts
+FROM Orders
+INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
+GROUP BY [Orders].OrderID
+...
+	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
+...
+DATEADD(year,24,OrderDate) AS OrderDate,
+```
 Writing CASE statements
 ```
 CASE Metric WHEN 'Revenue' THEN 1
@@ -52,6 +64,18 @@ WHEN 'CostOfGoods' THEN 2
 WHEN 'DiscountValue' THEN 3
 WHEN 'FreightByProduct' THEN 4
 ELSE 999 END AS SortingIndex
+```
+Writing CTEs
+```
+WITH number_of_products_cte (OrderID,NumberOfProducts) 
+AS
+(
+SELECT [Orders].OrderID,
+	COUNT([Orders].OrderID) AS NumberOfProducts
+FROM Orders
+INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
+GROUP BY [Orders].OrderID
+)
 ```
 Changing data structure by unpivoting
 ```
@@ -81,28 +105,4 @@ ADD UnitCost real;
 UPDATE [dbo].[Order Details]
 SET 
 	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
-```
-Writing CTEs
-```
-WITH number_of_products_cte (OrderID,NumberOfProducts) 
-AS
-(
-SELECT [Orders].OrderID,
-	COUNT([Orders].OrderID) AS NumberOfProducts
-FROM Orders
-INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
-GROUP BY [Orders].OrderID
-)
-```
-Aggregating, formating and applying various functions to transform data
-```
-SELECT [Orders].OrderID,
-	COUNT([Orders].OrderID) AS NumberOfProducts
-FROM Orders
-INNER JOIN [Order Details] ON [Orders].OrderID=[Order Details].OrderID
-GROUP BY [Orders].OrderID
-...
-	[UnitCost]=ROUND(UnitPrice*(0.75 + ROUND( 0.1 *RAND(convert(varbinary, newid())),2)),2);
-...
-DATEADD(year,24,OrderDate) AS OrderDate,
 ```
