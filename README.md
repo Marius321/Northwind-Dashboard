@@ -16,7 +16,7 @@ I used the database schema to join the tables together and wrote SQL queries to 
 Certain code snippets are also available at the bottom of this README file.
 
 ## STEP 3. Downloading the tables/data model
-Downloaded the aforementioned table in Microsoft Excel (.csv) format and imported them into the Tableau Data Model:
+Downloaded the aforementioned tables in Microsoft Excel (.csv) format and icorporated them into my Tableau Data Model:
 ![image](https://user-images.githubusercontent.com/117634180/213017815-633e71b3-8a8e-4aae-a3cb-e894efded018.png)
 
 ## STEP 4. Creating the dashboards
