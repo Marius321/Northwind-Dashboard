@@ -10,7 +10,7 @@ Below I outlined the steps involved in the creation of this dashboard
 First I installed the SQL Server Management Studio (SSMS) onto my local machine and ran the Northwind database installation scripts locally. The scripts are available here: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
 
 ## STEP 2. Writing the Scripts
-I used the database schema to join the tables together and developed my future data model. This meant I needed to create three separate tables: Orders, Employees and Products. The scripts for updating and creating the tables with comments are available here: link
+I used the database schema to join the tables together and wrote SQL queries to select and transform the data for my three tables: one for order (called OrdersMain), one for employees (called EmployeesMain) and one for products (called ProductsMain). The scripts are available here: link
 ![database_schema](https://user-images.githubusercontent.com/117634180/213016206-473ed04d-696d-4d90-8e18-2be10c2b324c.png)
 SQL functionality used:
   - Selecting and joining the data
