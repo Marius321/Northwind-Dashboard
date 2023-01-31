@@ -1,17 +1,17 @@
 # Northwind-Sales-Dashboard
-This repository includes the database scripts and other information related to my personal Tableau project. The purpose of this project is showcase my SQL and Tableau Skills.
+This repository includes the database scripts and other information related to my personal Tableau project. The purpose of this project is to showcase my SQL and Tableau Skills.
 
 The Dashboard
 ![image](https://user-images.githubusercontent.com/117634180/213013756-b9a379a9-3d38-46dc-aabb-f044ad2f1056.png)
-The dashboard available here: 
+The dashboard is available here: 
 
-Below I outlined the steps involved in creation of this dashboard 
+Below I outlined the steps involved in the creation of this dashboard 
 
 # STEP 1. Installing the Database
-First I have installed the SQL Server Management Studio (SSMS) onto my local machine and ran the Northwind database installation sripts locally. The scripts are available here: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
+First I installed the SQL Server Management Studio (SSMS) onto my local machine and ran the Northwind database installation scripts locally. The scripts are available here: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
 
 # STEP 2. Writing the Scripts
-I used the database schema to join the tables together and developed my future data model. This meant I needed to create three separate tables: Orders, Employees and Products.The scripts for updating and creating the tables with comments are available here: link
+I used the database schema to join the tables together and developed my future data model. This meant I needed to create three separate tables: Orders, Employees and Products. The scripts for updating and creating the tables with comments are available here: link
 ![database_schema](https://user-images.githubusercontent.com/117634180/213016206-473ed04d-696d-4d90-8e18-2be10c2b324c.png)
 SQL functionality used:
   - Selecting and joining the data
@@ -22,12 +22,12 @@ SQL functionality used:
   - Aggregate functions
   - Formatting numbers and assigning data types
 
-# STEP 3. Dowloading the tables/data model
-Dowloaded the aforementioned table in Microsoft Excel (.csv) format and imported them into the Tableau Data Model:
+# STEP 3. Downloading the tables/data model
+Downloaded the aforementioned table in Microsoft Excel (.csv) format and imported them into the Tableau Data Model:
 ![image](https://user-images.githubusercontent.com/117634180/213017815-633e71b3-8a8e-4aae-a3cb-e894efded018.png)
 
 # STEP 4. Creating the dashboards
-The last step involved creating Tableau dashbaord. Tableau functionality and features used:
+The last step involved creating a Tableau dashboard. Tableau functionality and features used:
   - Dynamic Parameters
   - Parameter Actions
   - Level of Detail Expressions
@@ -45,7 +45,7 @@ FROM Territories AS t
 	INNER JOIN Region AS r ON t.RegionID=r.RegionID
 	INNER JOIN EmployeeTerritories AS e ON t.TerritoryID=e.TerritoryID
 ```
-Aggregating, formating and applying various functions to transform data
+Aggregating, formatting and applying various functions to transform data
 ```
 SELECT [Orders].OrderID,
 	COUNT([Orders].OrderID) AS NumberOfProducts
