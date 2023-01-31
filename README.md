@@ -1,4 +1,4 @@
-# Northwind-Sales-Dashboard
+# Northwind Sales Dashboard
 This repository includes the database scripts and other information related to my personal Tableau project. The purpose of this project is to showcase my SQL and Tableau Skills.
 
 The Dashboard
