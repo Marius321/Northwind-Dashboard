@@ -4,7 +4,7 @@ This repository showcases the SQL data preparation (using SSMS) behind my person
 ![image](https://user-images.githubusercontent.com/117634180/213013756-b9a379a9-3d38-46dc-aabb-f044ad2f1056.png)
 The dashboard is available here: 
 
-Below I outlined the steps involved in the creation of this dashboard 
+Below I outlined the steps involved in the creation of this dashboard.
 
 ## STEP 1. Installing the Database
 First I installed the SQL Server Management Studio (SSMS) onto my local machine and ran the Northwind database installation scripts locally. The scripts are available here: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
