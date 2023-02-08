@@ -1,7 +1,7 @@
 # Northwind Sales Dashboard
 This repository showcases the SQL data preparation (using SSMS) behind my personal Tableau dashboarding project. The purpose of this project is to demonstrate my SQL and Tableau abilities.
 
-Dashboard
+Dashboard:
 ![image](https://user-images.githubusercontent.com/117634180/213013756-b9a379a9-3d38-46dc-aabb-f044ad2f1056.png)
 The dashboard is available here: 
 
@@ -13,7 +13,7 @@ First I installed the SQL Server Management Studio (SSMS) onto my local machine 
 ## STEP 2. Writing the Scripts
 I used the database schema to join the tables together and wrote SQL queries to select and transform the data for my three tables: one for order (called OrdersMain), one for employees (called EmployeesMain) and one for products (called ProductsMain). The SQL code to transform the data and create these tables is available [here](https://github.com/Marius321/Northwind-Dashboard/blob/main/SQLQuery.sql).
 
-Database Schema
+Database Schema:
 ![database_schema](https://user-images.githubusercontent.com/117634180/213016206-473ed04d-696d-4d90-8e18-2be10c2b324c.png)
 
 Certain code snippets are also available at the bottom of this README file.
