@@ -1,5 +1,5 @@
 # Northwind Sales Dashboard
-This repository showcases the SQL data preparation (within SSMS) behind my personal Tableau dashboarding project using the Northwind database. The purpose of this project is to demonstrate my SQL and Tableau skills.
+This repository showcases the SQL data preparation (using SSMS) behind my personal Tableau dashboarding project. The purpose of this project is to demonstrate my SQL and Tableau abilities.
 
 ![image](https://user-images.githubusercontent.com/117634180/213013756-b9a379a9-3d38-46dc-aabb-f044ad2f1056.png)
 The dashboard is available here: 
