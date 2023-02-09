@@ -2,7 +2,8 @@
 This repository showcases the SQL data preparation (using SSMS) behind my personal Tableau dashboarding project. The purpose of this project is to demonstrate my SQL and Tableau abilities.
 
 Dashboard:
-![image](https://user-images.githubusercontent.com/117634180/213013756-b9a379a9-3d38-46dc-aabb-f044ad2f1056.png)
+![Overview Dashboard](https://user-images.githubusercontent.com/117634180/217853302-514f9b58-aa2d-4e0d-a049-22dc6937a7c5.png)
+
 The dashboard is available here: 
 
 Below I outlined the steps involved in the creation of this dashboard.
