@@ -4,7 +4,7 @@ This repository showcases the SQL data preparation (using SSMS) behind my person
 Dashboard:
 ![Overview Dashboard](https://user-images.githubusercontent.com/117634180/217853302-514f9b58-aa2d-4e0d-a049-22dc6937a7c5.png)
 
-The dashboard is available here: 
+The dashboard is available [here](https://public.tableau.com/views/NorthwindDashboard_16759560738830/SQL?:language=en-US&:display_count=n&:origin=viz_share_link).
 
 Below I outlined the steps involved in the creation of this dashboard.
 
